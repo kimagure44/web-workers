@@ -3,7 +3,7 @@ const value = document.querySelector('#objectsTotal');
 const container = document.querySelector('.container');
 
 btn.addEventListener('click', () => {
-    const worker = new Worker('web-worker-fetch.js')
+    const worker = new Worker('web-worker-fetch.js');
     
     const getRandomNumber = (min, max) => Math.floor(Math.random() * min) + max;
 
@@ -20,12 +20,12 @@ btn.addEventListener('click', () => {
       div.style.left = `${left}px`;
       div.style.top = `${top}px`;
       div.style.transform = `rotateZ(${rotate * (Math.floor(Math.random() * 28))}deg)`;
-      img.src = evt.data
+      img.src = evt.data;
       div.appendChild(img);
-      container.appendChild(div)
+      container.appendChild(div);
     })
 
-    worker.postMessage(value.value)
+    worker.postMessage(value.value);
     
 });
 
