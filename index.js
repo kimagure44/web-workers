@@ -3,7 +3,7 @@ const value = document.querySelector('#objectsTotal');
 const container = document.querySelector('.container');
 
 btn.addEventListener('click', () => {
-    var worker = new Worker('web-worker-fetch.js')
+    const worker = new Worker('web-worker-fetch.js')
     
     const getRandomNumber = (min, max) => Math.floor(Math.random() * min) + max;
 
